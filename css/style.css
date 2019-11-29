@@ -1,0 +1,276 @@
+body, div, p, ul, li, ol, dl, dd, dt, h1, h2, h3, h4, h5, h6, span, i, input, img, a, button, select, table, tr, th, td, label, textarea {
+    padding                     : 0;
+    margin                      : 0;
+    -webkit-appearance          : none;
+    -webkit-tap-highlight-color : rgba(0, 0, 0, 0);
+    outline                     : none;
+    -webkit-overflow-scrolling  : touch;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size   : 100%;
+    font-weight : normal;
+}
+li {
+    list-style : none;
+}
+i {
+    font-style : normal;
+}
+a {
+    text-decoration : none;
+}
+img {
+    border         : 0 none;
+    vertical-align : top;
+}
+* {
+    margin  : 0;
+    padding : 0;
+}
+.clearfix {
+    *zoom : 1;
+}
+.clearfix:after {
+    content    : ".";
+    height     : 0;
+    visibility : hidden;
+    display    : block;
+    clear      : both;
+}
+body,
+button {
+    font-size   : 14rem;
+    font-family : "microsoft yahei";
+}
+body {
+    position : relative;
+    overflow : hidden;
+}
+.body {
+    position        : relative;
+    background-size : 100% 100%;
+    overflow        : hidden;
+    background      : white
+}
+body {
+    background  : #fff;
+    font-family : Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size   : 100rem;
+    color       : #000000;
+    margin      : 0;
+    padding     : 0;
+    height      : 100vh;
+    /*background  : #f1f1cd;*/
+}
+.music {
+    position          : fixed;
+    width             : 0.72rem;
+    top               : 0.16rem;
+    right             : 0.4rem;
+    animation         : music 5s infinite linear;
+    -webkit-animation : music 5s infinite linear;
+    z-index           : 80000;
+}
+.music_pause {
+    animation-play-state         : paused;
+    -webkit-animation-play-state : paused; /* Safari 和 Chrome */
+}
+@keyframes music {
+    from {
+        transform         : rotate(-360deg);
+        -webkit-transform : rotate(-360deg);
+    }
+    to {
+        transform         : rotate(0deg);
+        -webkit-transform : rotate(0deg);
+    }
+}
+@-webkit-keyframes music {
+    from {
+        transform         : rotate(-360deg);
+        -webkit-transform : rotate(-360deg);
+    }
+    to {
+        transform         : rotate(0deg);
+        -webkit-transform : rotate(0deg);
+    }
+}
+.music_pause {
+    animation-play-state : paused;
+    /*-webkit-animation-play-state : paused; !* Safari 和 Chrome *!*/
+    -webkit-animation    : none !important;
+}
+.index {
+    position : fixed;
+    width    : 7.50rem;
+    left     : 0;
+    bottom   : 0;
+    z-index  : 100;
+}
+.loading {
+    width            : 100%;
+    height           : 100%;
+    position         : absolute;
+    z-index          : 999999;
+    background-color : #f0fdff;
+    /*display          : none;*/
+    display          : flex;
+    flex-flow        : row wrap;
+    justify-content  : center;
+    align-items      : center;
+}
+.loadingtext {
+    width      : 100%;
+    position   : absolute;
+    left       : 0;
+    top        : 5.6rem;
+    text-align : center;
+    font-size  : 0.24rem;
+    color      : #585858;
+    display    : none;
+}
+.loading_gif {
+    width : 2.2rem;
+}
+.hp .loading_gif {
+    position : absolute;
+    width    : 2.2rem;
+    margin   : 0 auto;
+    top      : 2.37rem;
+    left     : 5.655rem;
+}
+.hp .tishi {
+    display : none;
+}
+.hp .tishi2 {
+    display    : table;
+    margin     : 0 auto;
+    font-size  : 0.26rem;
+    margin-top : 3.3rem;
+    opacity    : 0.8;
+}
+.tishi {
+    display    : table;
+    margin     : 0 auto;
+    font-size  : 0.16rem;
+    margin-top : 6.8rem;
+    /* color: rgba(255, 255, 255, 0.53); */
+    /*display    : none;*/
+}
+.tishi2 {
+    display    : table;
+    margin     : 0 auto;
+    font-size  : 0.20rem;
+    margin-top : 1.7rem;
+    opacity    : 0.8;
+    display    : none;
+}
+.wrapper {
+    position                 : absolute;
+    width                    : 100vw;
+    height                   : 100vh;
+    left                     : 0;
+    top                      : 0;
+    overflow                 : hidden;
+    transform-origin         : 0 0;
+    -webkit-transform-origin : 0 0;
+    /*opacity  : 0;*/
+}
+.fenxiang {
+    width    : 100px;
+    position : absolute;
+    right    : 10%;
+    bottom   : 10%;
+    z-index  : 20;
+}
+body {
+    width    : 100vw;
+    height   : 100vh;
+    position : absolute;
+    left     : 0;
+    top      : 0;
+    overflow : hidden;
+}
+.video {
+    width             : 100%;
+    height            : 100%;
+    position          : absolute;
+    left              : 0;
+    top               : 0;
+    z-index           : 1;
+    object-fit        : fill;
+    transform         : translateZ(0px);
+    -webkit-transform : translateZ(0px)
+}
+.start {
+    position                 : absolute;
+    overflow                 : hidden;
+    z-index                  : 1000;
+    transform-origin         : 0 0;
+    -webkit-transform-origin : 0 0;
+    left                     : 0;
+    top                      : 0;
+    /*width                    : 100vw;*/
+    height                   : 100vh;
+    transform                : rotate(90deg);
+    -webkit-transform        : rotate(90deg);
+    transform                : translateZ(50000px);
+    -webkit-transform        : translateZ(50000px);
+    /*background               : url("https://lonecry-1251414825.cos.ap-shanghai.myqcloud.com/video/originindex.jpg") no-repeat;*/
+    /*background-size          : auto 100%;*/
+}
+.closevideo {
+    position          : absolute;
+    display           : block;
+    color             : black;
+    font-size         : 0.15%;
+    right             : 4%;
+    bottom            : 5.9%;
+    z-index           : 1000;
+    padding           : 1.6% 2.6%;
+    background        : #ffffff3b;
+    border            : 1px solid white;
+    transform         : translateZ(100px);
+    -webkit-transform : translateZ(100px);
+}
+.enter {
+    position   : absolute;
+    z-index    : 200;
+    left       : 1.5rem;
+    top        : 50%;
+    font-size  : 0.30rem;
+    color      : white;
+    /* width: 5rem; */
+    /* margin: 0 auto; */
+    width      : 4.5rem;
+    text-align : center;
+    border     : 1px solid wheat;
+    padding    : 0.1rem;
+}
+@media (orientation : portrait) {
+    .wrapper {
+        position          : absolute;
+        left              : 0;
+        top               : 0;
+        width             : 100vh;
+        height            : 100vw;
+        left              : 100%;
+        z-index           : 1;
+        transform         : rotate(90deg) translateZ(1px);
+        -webkit-transform : rotate(90deg) translateZ(1px);
+        background-color  : white;
+    }
+    .start {
+        position          : absolute;
+        width             : 100vh;
+        height            : 100vw;
+        left              : 100%;
+        top               : 0;
+        z-index           : 120000;
+        transform         : rotate(90deg) translateZ(50000px);
+        -webkit-transform : rotate(90deg) translateZ(50000px);
+    }
+    .closevideo {
+        font-size : 0.3%;
+    }
+}
