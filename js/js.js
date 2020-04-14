@@ -15,8 +15,26 @@ $(function () {
 	fenxiang("安卓video", "Here is a test!", "Here is a test!", '', "https://o.cztvcloud.com/181/5843861/images/fenxiang.jpg")
 	//必须在微信Weixin JSAPI的WeixinJSBridgeReady才能生效
 	document.addEventListener("WeixinJSBridgeReady", function () {
+		document.getElementById('video1').load()
+		var s = false
+		document.getElementById('video1').oncanplaythrough = function () {
+			if (!s) {
+				$('.start,.enter').hide()
+				document.getElementById('video1').play();
+				s = true
+			}
 
+		}
 	}, false);
+	var s = false
+	document.getElementById('video1').oncanplaythrough = function () {
+		if (!s) {
+
+			document.getElementById('video1').play();
+			s = true
+		}
+
+	}
 	var playnow = false, first = true
 	$('.start,.enter').click(function () {
 		$('.start,.enter').hide()
@@ -139,6 +157,8 @@ myVideo.addEventListener('play', function () {
 	$('video').attr('x5-video-player-fullscreen', true)
 	$('video').attr('x5-video-player-type', 'h5')
 	$('video').attr('controls', false)
+	$('.start,.enter').hide()
+
 })
 myVideo.addEventListener('pause', function () {
 	init();
